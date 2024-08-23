@@ -35,9 +35,21 @@ public class StockRestController {
     )
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Categoría creada exitosamente"),
-            @ApiResponse(responseCode = "400", description = "Solicitud inválida. Los datos proporcionados son incorrectos o incompletos."),
-            @ApiResponse(responseCode = "409", description = "Conflicto. La categoría ya existe o hay un conflicto con los datos proporcionados."),
-            @ApiResponse(responseCode = "500", description = "Error interno del servidor. No se pudo procesar la solicitud.")
+            @ApiResponse(responseCode = "400", description = "Solicitud inválida. Los datos proporcionados son incorrectos o incompletos.",
+                    content = {
+                            @io.swagger.v3.oas.annotations.media.Content(mediaType = "application/json",
+                                    schema = @io.swagger.v3.oas.annotations.media.Schema(implementation = ResponseException.class))
+                    }),
+            @ApiResponse(responseCode = "409", description = "Conflicto. La categoría ya existe o hay un conflicto con los datos proporcionados.",
+                    content = {
+                            @io.swagger.v3.oas.annotations.media.Content(mediaType = "application/json",
+                                    schema = @io.swagger.v3.oas.annotations.media.Schema(implementation = ResponseException.class))
+                    }),
+            @ApiResponse(responseCode = "500", description = "Error interno del servidor. No se pudo procesar la solicitud.",
+                    content = {
+                            @io.swagger.v3.oas.annotations.media.Content(mediaType = "application/json",
+                                    schema = @io.swagger.v3.oas.annotations.media.Schema(implementation = ResponseException.class))
+                    })
     })
     @PostMapping()
     public ResponseEntity<Void> createCategory(@RequestBody CategoryReq categoryReq) {
