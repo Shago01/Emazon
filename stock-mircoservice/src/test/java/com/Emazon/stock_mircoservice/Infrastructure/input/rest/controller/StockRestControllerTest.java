@@ -1,7 +1,6 @@
 package com.Emazon.stock_mircoservice.Infrastructure.input.rest.controller;
 
-import com.Emazon.stock_mircoservice.Infrastructure.input.rest.controller.StockRestController;
-import com.Emazon.stock_mircoservice.Infrastructure.input.rest.dto.request.RequestDto;
+import com.Emazon.stock_mircoservice.Infrastructure.input.rest.dto.request.CategoryReq;
 import com.Emazon.stock_mircoservice.application.handler.ICategoryHandler;
 import com.Emazon.stock_mircoservice.domine.exception.EmptyFieldException;
 import org.junit.jupiter.api.Test;
@@ -33,9 +32,9 @@ class StockRestControllerIntegrationTest {
     @Test
     void shouldCreateCategorySuccessfully() throws Exception {
         // Arrange
-        RequestDto requestDto = new RequestDto();
-        requestDto.setName("Electronics");
-        requestDto.setDescription("All kinds of electronics.");
+        CategoryReq categoryReq = new CategoryReq();
+        categoryReq.setName("Electronics");
+        categoryReq.setDescription("All kinds of electronics.");
 
         // Act & Assert
         mockMvc.perform(post("/stock/category/")

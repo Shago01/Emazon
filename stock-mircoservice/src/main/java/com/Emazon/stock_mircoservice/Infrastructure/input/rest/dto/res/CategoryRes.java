@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class ResponseDto {
+public class CategoryRes {
     private long id;
     private String name;
     private String description;
