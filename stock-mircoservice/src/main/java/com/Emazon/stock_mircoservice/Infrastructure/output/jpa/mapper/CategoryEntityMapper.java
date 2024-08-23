@@ -4,6 +4,9 @@ import com.Emazon.stock_mircoservice.Infrastructure.output.jpa.entities.Category
 import com.Emazon.stock_mircoservice.domine.models.Category;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class CategoryEntityMapper {
     
@@ -17,4 +20,5 @@ public class CategoryEntityMapper {
         entity.setDescription(model.getDescription());
         return entity;
     }
+
 }

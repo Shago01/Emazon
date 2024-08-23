@@ -5,6 +5,9 @@ import com.Emazon.stock_mircoservice.Infrastructure.input.rest.dto.res.ResponseD
 import com.Emazon.stock_mircoservice.domine.models.Category;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Component
 public class DtoRestMapper {
 

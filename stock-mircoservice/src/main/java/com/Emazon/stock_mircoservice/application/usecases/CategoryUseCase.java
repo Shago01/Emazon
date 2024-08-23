@@ -4,6 +4,8 @@ import com.Emazon.stock_mircoservice.domine.models.Category;
 import com.Emazon.stock_mircoservice.domine.ports.input.ICategoryServicePort;
 import com.Emazon.stock_mircoservice.domine.ports.out.ICategoryPersistencePort;
 
+import java.util.List;
+
 public class CategoryUseCase implements ICategoryServicePort {
 
     private ICategoryPersistencePort categoryPersistencePort;

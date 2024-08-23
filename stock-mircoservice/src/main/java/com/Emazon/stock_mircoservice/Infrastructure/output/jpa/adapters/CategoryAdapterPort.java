@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class CategoryAdapterPort implements ICategoryPersistencePort {
     private final ICategoryRepository categoryRepository;
-    private final CategoryEntityMapper categoryEntityMapper;    
+    private final CategoryEntityMapper categoryEntityMapper;
 
     @Override
     public void save(Category category) {
@@ -21,5 +21,6 @@ public class CategoryAdapterPort implements ICategoryPersistencePort {
        categoryRepository.save(categoryEntityMapper.toEntity(category));
      
     }
+
 
 }
