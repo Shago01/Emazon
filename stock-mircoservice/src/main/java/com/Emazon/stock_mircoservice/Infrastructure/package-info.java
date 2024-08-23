@@ -1,0 +1,1 @@
+package com.Emazon.stock_mircoservice.Infrastructure;
