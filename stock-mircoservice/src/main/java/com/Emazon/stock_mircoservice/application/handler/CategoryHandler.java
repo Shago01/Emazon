@@ -22,8 +22,8 @@ public class CategoryHandler implements ICategoryHandler {
     }
 
     @Override
-    public List<Category> getAllCategories(Integer page, Integer pageZise, String SortBy, Boolean ascending) {
-        return categoryServicePort.getAllCategories(page,pageZise,SortBy,ascending);
+    public List<Category> getAllCategories(Integer page, Integer pageZise, Boolean ascending) {
+        return categoryServicePort.getAllCategories(page,pageZise,ascending);
     }
 
 }

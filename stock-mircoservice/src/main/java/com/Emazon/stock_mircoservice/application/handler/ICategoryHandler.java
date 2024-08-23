@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface ICategoryHandler {
     void saveCategoryInStock(Category category);
-    List<Category> getAllCategories( Integer page, Integer pageZise, String SortBy, Boolean ascending );
+    List<Category> getAllCategories( Integer page, Integer pageZise, Boolean ascending );
 }

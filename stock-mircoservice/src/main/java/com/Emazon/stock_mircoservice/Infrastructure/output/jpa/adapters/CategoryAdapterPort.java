@@ -20,8 +20,8 @@ public class CategoryAdapterPort implements ICategoryPersistencePort {
     private final CategoryEntityMapper categoryEntityMapper;
 
     @Override
-    public List<Category> getAllCategories(Integer page, Integer pageZise, String SortBy, Boolean asc) {
-        PageRequest pagination = PageRequest.of(page,pageZise,asc ? Sort.by(SortBy).ascending() : Sort.by(SortBy).descending());
+    public List<Category> getAllCategories(Integer page, Integer pageZise, Boolean asc) {
+        PageRequest pagination = PageRequest.of(page,pageZise,asc ? Sort.by("name").ascending() : Sort.by("name").descending());
         List<CategoryEntity> listEntities = categoryRepository.findAll(pagination).getContent();
 
         if(listEntities.isEmpty()){
